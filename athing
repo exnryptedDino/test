@@ -156,7 +156,7 @@ Farms_2.TextWrapped = true
 
 -- Scripts:
 
-local function AHZTPUR_fake_script() -- OpenShop.LocalScript 
+local function KNFZA_fake_script() -- OpenShop.LocalScript 
 	local script = Instance.new('LocalScript', OpenShop)
 
 	
@@ -166,9 +166,10 @@ local function AHZTPUR_fake_script() -- OpenShop.LocalScript
 	
 	local function OnClick()
 	shop.Visible = true
+	shop.postion = "{0.397, 0},{0.301, 0}"
 	
 	script.Parent.Parent.OpenShop.MouseButton1Click:Connect(OnClick)
 	
 	end
 end
-coroutine.wrap(AHZTPUR_fake_script)()
+coroutine.wrap(KNFZA_fake_script)()
