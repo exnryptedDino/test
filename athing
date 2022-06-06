@@ -65,62 +65,6 @@ AutoMine.Font = Enum.Font.FredokaOne
 AutoMine.Text = "Auto Farm"
 AutoMine.TextColor3 = Color3.fromRGB(255, 255, 255)
 AutoMine.TextSize = 14.000
-function OnStart()
-	G.On = true -- true = on / false = off
-
-	-- main scripts below --
-
-	function breakblock(pos)
-		local args = {
-			[1] = pos
-		}
-
-		game:GetService("ReplicatedStorage").Events.MineBlock:FireServer(unpack(args))
-	end
-
-	local Mod = require(game:GetService("ReplicatedStorage").SharedModules.ChunkUtil)
-
-	function getPartBelow()
-		local Character = game.Players.LocalPlayer.Character
-		local Foot = Character.RightFoot
-		local RayOrigin = Foot.Position
-		local RayDirection = Vector3.new(0, -1, 0)
-
-		local Params = RaycastParams.new()
-		Params.FilterType = Enum.RaycastFilterType.Blacklist
-		Params.FilterDescendantsInstances = {Character}
-
-		local Result = workspace:Raycast(RayOrigin, RayDirection, Params)
-
-		if Result then
-			local RayInstance = Result.Instance
-			print("Instance hit: " .. tostring(RayInstance))
-			return RayInstance
-		end
-
-		return nil
-	end
-
-	while _G.On do
-		task.wait()
-		local closest = getPartBelow()
-
-		if closest ~= nil then
-			local Pos = closest.Position
-
-			local NewPos = Mod.worldToCell(Pos)
-
-			task.spawn(
-				function()
-					breakblock(NewPos)
-				end
-			)
-		end
-	end
-
-script.Parent.MouseButton1Click:Connect(OnStart)
-
-end
 
 UICorner_4.Parent = AutoMine
 
@@ -159,3 +103,73 @@ ChestESP.TextColor3 = Color3.fromRGB(255, 255, 255)
 ChestESP.TextSize = 14.000
 
 UICorner_7.Parent = ChestESP
+
+-- Scripts:
+
+local function BVWAI_fake_script() -- AutoMine.LocalScript 
+	local script = Instance.new('LocalScript', AutoMine)
+
+	
+	
+	
+	
+	
+	function OnStart()
+		G.On = true -- true = on / false = off
+	
+		-- main scripts below --
+	
+		function breakblock(pos)
+			local args = {
+				[1] = pos
+			}
+	
+			game:GetService("ReplicatedStorage").Events.MineBlock:FireServer(unpack(args))
+		end
+	
+		local Mod = require(game:GetService("ReplicatedStorage").SharedModules.ChunkUtil)
+	
+		function getPartBelow()
+			local Character = game.Players.LocalPlayer.Character
+			local Foot = Character.RightFoot
+			local RayOrigin = Foot.Position
+			local RayDirection = Vector3.new(0, -1, 0)
+	
+			local Params = RaycastParams.new()
+			Params.FilterType = Enum.RaycastFilterType.Blacklist
+			Params.FilterDescendantsInstances = {Character}
+	
+			local Result = workspace:Raycast(RayOrigin, RayDirection, Params)
+	
+			if Result then
+				local RayInstance = Result.Instance
+				print("Instance hit: " .. tostring(RayInstance))
+				return RayInstance
+			end
+	
+			return nil
+		end
+	
+		while _G.On do
+			task.wait()
+			local closest = getPartBelow()
+	
+			if closest ~= nil then
+				local Pos = closest.Position
+	
+				local NewPos = Mod.worldToCell(Pos)
+	
+				task.spawn(
+					function()
+						breakblock(NewPos)
+					end
+				)
+			end
+		end
+	
+		script.Parent.MouseButton1Click:Connect(OnStart)
+	
+	end
+	
+end
+coroutine.wrap(BVWAI_fake_script)()
