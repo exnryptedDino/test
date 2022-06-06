@@ -17,9 +17,13 @@ local TextLabel_3 = Instance.new("TextLabel")
 local OpenGuis = Instance.new("Frame")
 local UICorner_5 = Instance.new("UICorner")
 local OpenGuis_2 = Instance.new("TextButton")
-local OpenGuis_3 = Instance.new("Frame")
+local OpenGuisFrame = Instance.new("Frame")
 local UICorner_6 = Instance.new("UICorner")
-local OpenGuis_4 = Instance.new("TextButton")
+local OpenShop = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local Farms = Instance.new("Frame")
+local UICorner_8 = Instance.new("UICorner")
+local Farms_2 = Instance.new("TextButton")
 
 --Properties:
 
@@ -96,8 +100,8 @@ UICorner_5.Parent = OpenGuis
 
 OpenGuis_2.Name = "OpenGui's"
 OpenGuis_2.Parent = OpenGuis
-OpenGuis_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-OpenGuis_2.BackgroundTransparency = 1.000
+OpenGuis_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+OpenGuis_2.BackgroundTransparency = 0.800
 OpenGuis_2.Position = UDim2.new(-0.0116279069, 0, 0, 0)
 OpenGuis_2.Size = UDim2.new(0, 85, 0, 30)
 OpenGuis_2.Font = Enum.Font.FredokaOne
@@ -106,23 +110,65 @@ OpenGuis_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 OpenGuis_2.TextSize = 16.000
 OpenGuis_2.TextWrapped = true
 
-OpenGuis_3.Name = "OpenGuis"
-OpenGuis_3.Parent = Frame_2
-OpenGuis_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-OpenGuis_3.BackgroundTransparency = 1.000
-OpenGuis_3.Position = UDim2.new(0.0700000003, 0, 0.21400778, 0)
-OpenGuis_3.Size = UDim2.new(0, 86, 0, 30)
+OpenGuisFrame.Name = "OpenGui'sFrame"
+OpenGuisFrame.Parent = OpenGuis
+OpenGuisFrame.BackgroundColor3 = Color3.fromRGB(121, 121, 121)
+OpenGuisFrame.BackgroundTransparency = 0.800
+OpenGuisFrame.Position = UDim2.new(1.20930231, 0, -0.433333337, 0)
+OpenGuisFrame.Size = UDim2.new(0, 266, 0, 256)
 
-UICorner_6.Parent = OpenGuis_3
+UICorner_6.Parent = OpenGuisFrame
 
-OpenGuis_4.Name = "OpenGui's"
-OpenGuis_4.Parent = OpenGuis_3
-OpenGuis_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-OpenGuis_4.BackgroundTransparency = 1.000
-OpenGuis_4.Position = UDim2.new(0.0116279069, 0, 0, 0)
-OpenGuis_4.Size = UDim2.new(0, 85, 0, 30)
-OpenGuis_4.Font = Enum.Font.FredokaOne
-OpenGuis_4.Text = "Auto Farm"
-OpenGuis_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-OpenGuis_4.TextSize = 16.000
-OpenGuis_4.TextWrapped = true
+OpenShop.Name = "OpenShop"
+OpenShop.Parent = OpenGuisFrame
+OpenShop.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+OpenShop.BackgroundTransparency = 0.800
+OpenShop.Position = UDim2.new(0.0710788816, 0, 0.05078125, 0)
+OpenShop.Size = UDim2.new(0, 228, 0, 30)
+OpenShop.Font = Enum.Font.FredokaOne
+OpenShop.Text = "Open Shop"
+OpenShop.TextColor3 = Color3.fromRGB(255, 255, 255)
+OpenShop.TextSize = 16.000
+OpenShop.TextWrapped = true
+
+UICorner_7.Parent = OpenShop
+
+Farms.Name = "Farms"
+Farms.Parent = Frame_2
+Farms.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Farms.BackgroundTransparency = 1.000
+Farms.Position = UDim2.new(0.0700000003, 0, 0.21400778, 0)
+Farms.Size = UDim2.new(0, 86, 0, 30)
+
+UICorner_8.Parent = Farms
+
+Farms_2.Name = "Farms"
+Farms_2.Parent = Farms
+Farms_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Farms_2.BackgroundTransparency = 0.800
+Farms_2.Position = UDim2.new(0.0116279069, 0, 0, 0)
+Farms_2.Size = UDim2.new(0, 85, 0, 30)
+Farms_2.Font = Enum.Font.FredokaOne
+Farms_2.Text = "Auto Farm"
+Farms_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Farms_2.TextSize = 16.000
+Farms_2.TextWrapped = true
+
+-- Scripts:
+
+local function AHZTPUR_fake_script() -- OpenShop.LocalScript 
+	local script = Instance.new('LocalScript', OpenShop)
+
+	
+	
+	local shop = game.StarterGui.ScreenGui.Shop
+	
+	
+	local function OnClick()
+	shop.Visible = true
+	
+	script.Parent.Parent.OpenShop.MouseButton1Click:Connect(OnClick)
+	
+	end
+end
+coroutine.wrap(AHZTPUR_fake_script)()
