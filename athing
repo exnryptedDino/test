@@ -27,7 +27,6 @@ KeySystem.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
 KeySystem.BorderColor3 = Color3.fromRGB(27, 42, 53)
 KeySystem.Position = UDim2.new(0.430729151, 0, 0.423791796, 0)
 KeySystem.Size = UDim2.new(0, 265, 0, 122)
-KeySystem.Visible = true
 
 Frame.Parent = KeySystem
 Frame.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
@@ -77,7 +76,7 @@ UICorner_5.Parent = DinoHub
 
 -- Scripts:
 
-local function OPGGPND_fake_script() -- TextBox.LocalScript 
+local function SEUYIEB_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	
@@ -101,5 +100,4 @@ local function OPGGPND_fake_script() -- TextBox.LocalScript
 	end
 	
 end
-coroutine.wrap(OPGGPND_fake_script)()
-
+coroutine.wrap(SEUYIEB_fake_script)()
