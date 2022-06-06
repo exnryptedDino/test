@@ -1,4 +1,8 @@
--- Gui to Lua
+
+
+
+
+--Gui to Lua
 -- Version: 3.2
 
 -- Instances:
@@ -10,7 +14,7 @@ local UICorner = Instance.new("UICorner")
 local TextLabel = Instance.new("TextLabel")
 local Frame_2 = Instance.new("Frame")
 local UICorner_2 = Instance.new("UICorner")
-local TextBox = Instance.new("TextBox")
+local TextLabel_2 = Instance.new("TextLabel")
 local UICorner_3 = Instance.new("UICorner")
 local UICorner_4 = Instance.new("UICorner")
 local DinoHub = Instance.new("Frame")
@@ -52,16 +56,16 @@ Frame_2.Size = UDim2.new(0, 241, 0, 38)
 
 UICorner_2.Parent = Frame_2
 
-TextBox.Parent = Frame_2
-TextBox.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
-TextBox.Size = UDim2.new(0, 241, 0, 38)
-TextBox.Font = Enum.Font.FredokaOne
-TextBox.PlaceholderColor3 = Color3.fromRGB(178, 178, 178)
-TextBox.Text = "Enter Key Here"
-TextBox.TextColor3 = Color3.fromRGB(136, 136, 136)
-TextBox.TextSize = 14.000
-
-UICorner_3.Parent = TextBox
+TextLabel_2.Parent = Frame_2
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0, 0, 0.0254669189, 0)
+TextLabel_2.Size = UDim2.new(0, 241, 0, 37)
+TextLabel_2.Font = Enum.Font.FredokaOne
+TextLabel_2.Text = "Checking Info..."
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 14.000
+UICorner_3.Parent = TextLabel_2
 
 UICorner_4.Parent = KeySystem
 
@@ -76,8 +80,8 @@ UICorner_5.Parent = DinoHub
 
 -- Scripts:
 
-local function SEUYIEB_fake_script() -- TextBox.LocalScript 
-	local script = Instance.new('LocalScript', TextBox)
+local function SXVE_fake_script() -- TextLabel_2.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel_2)
 
 	
 	
@@ -91,13 +95,13 @@ local function SEUYIEB_fake_script() -- TextBox.LocalScript
 	local weeklykey = "release"
 	local permkey = "yourcool"
 	
-	if key == "release" then
-		if plr:GetRankInGroup(groupid) >= 1 then
-			dinohub.Visible = true
-			keysys.Visible = false
 	
-		end
+	if plr:GetRankInGroup(groupid) >= 1 then
+		task.wait(0.5)
+		dinohub.Visible = true
+		keysys.Visible = false
+	
 	end
 	
 end
-coroutine.wrap(SEUYIEB_fake_script)()
+coroutine.wrap(SXVE_fake_script)()
