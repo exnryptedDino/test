@@ -27,7 +27,7 @@ KeySystem.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
 KeySystem.BorderColor3 = Color3.fromRGB(27, 42, 53)
 KeySystem.Position = UDim2.new(0.430729151, 0, 0.423791796, 0)
 KeySystem.Size = UDim2.new(0, 265, 0, 122)
-KeySystem.Visible = true
+KeySystem.Visible = false
 
 Frame.Parent = KeySystem
 Frame.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
@@ -77,7 +77,7 @@ UICorner_5.Parent = DinoHub
 
 -- Scripts:
 
-local function QKAUY_fake_script() -- TextBox.LocalScript 
+local function GYGB_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	
@@ -86,7 +86,7 @@ local function QKAUY_fake_script() -- TextBox.LocalScript
 	local groupid = "15024920"
 	local dinohub = script.Parent.Parent.Parent.Parent.Parent.DinoHub
 	local keysys = script.Parent.Parent.Parent.Parent.Parent.KeySystem
-	local key = script.Parent.ContentText
+	local key = script.Parent.Text
 	
 	local devkey = "dinoiscool"
 	local weeklykey = "release"
@@ -101,4 +101,4 @@ local function QKAUY_fake_script() -- TextBox.LocalScript
 	end
 	
 end
-coroutine.wrap(QKAUY_fake_script)()
+coroutine.wrap(GYGB_fake_script)()
