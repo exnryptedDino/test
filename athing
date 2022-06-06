@@ -77,7 +77,7 @@ UICorner_5.Parent = DinoHub
 
 -- Scripts:
 
-local function GYGB_fake_script() -- TextBox.LocalScript 
+local function OPGGPND_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	
@@ -86,7 +86,7 @@ local function GYGB_fake_script() -- TextBox.LocalScript
 	local groupid = "15024920"
 	local dinohub = script.Parent.Parent.Parent.Parent.Parent.DinoHub
 	local keysys = script.Parent.Parent.Parent.Parent.Parent.KeySystem
-	local key = script.Parent.Text
+	local key = script.Parent.PlaceholderText
 	
 	local devkey = "dinoiscool"
 	local weeklykey = "release"
@@ -101,4 +101,4 @@ local function GYGB_fake_script() -- TextBox.LocalScript
 	end
 	
 end
-coroutine.wrap(GYGB_fake_script)()
+coroutine.wrap(OPGGPND_fake_script)()
